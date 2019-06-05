@@ -1,0 +1,11 @@
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.deps.json
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.runtimeconfig.json
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.runtimeconfig.dev.json
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.dll
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.pdb
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.csproj.CoreCompileInputs.cache
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.AssemblyInfoInputs.cache
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.AssemblyInfo.cs
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.dll
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.pdb
+C:\Users\Paulius\source\repos\SocketClient\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.csprojAssemblyReference.cache
