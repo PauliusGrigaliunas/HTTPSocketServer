@@ -4,7 +4,8 @@ using System.Text;
 
 namespace SocketClient.Requests
 {
-    class IHttpRequest
+    interface IHttpRequest
     {
+        void CreateHttpGetRequest();
     }
 }

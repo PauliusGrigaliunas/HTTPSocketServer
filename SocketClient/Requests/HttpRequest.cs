@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SocketClient.Requests
 {
-    public class HttpRequest
+    public class HttpRequest : IHttpRequest
     {
         private readonly string _request;
         private readonly string _getHost;
@@ -68,7 +68,7 @@ namespace SocketClient.Requests
             }
         }
 
-        public string GetBetween(string strSource, string strStart, string strEnd)
+        private string GetBetween(string strSource, string strStart, string strEnd)
         {
             int Start, End;
             if (strSource.Contains(strStart) && strSource.Contains(strEnd))
