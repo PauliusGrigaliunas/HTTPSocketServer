@@ -8,18 +8,45 @@ public class SocketClient
 {
     public static int Main(String[] args)
     {
-        StartClient();
+        Meniu();
+        //StartClient();
         return 0;
     }
 
 
-    public static void StartClient()
+    public static void Meniu()
+    {
+
+        int choice = 0;
+
+        do
+        {
+
+            Console.WriteLine("============================");
+            Console.WriteLine("1 - www.w3.org");
+            Console.WriteLine("0 - EXIT");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter your Choice:");
+
+
+            choice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("============================");
+
+            if (choice.Equals(1)) CreateHttpGetRequest();
+
+        } while (!choice.Equals(0));
+
+        Console.WriteLine("End");
+
+    }
+
+    public static void CreateHttpGetRequest()
     {
         byte[] bytes = new byte[1024];
 
         try
         {
-            IPHostEntry host = Dns.GetHostEntry("www.w3.org"); 
+            IPHostEntry host = Dns.GetHostEntry("www.w3.org");
             IPAddress ipAddress = host.AddressList[0];
             IPEndPoint remoteEP = new IPEndPoint(ipAddress, 80);
 
@@ -32,14 +59,6 @@ public class SocketClient
                 sender.Connect(remoteEP);
 
                 Console.WriteLine("Socket connected to {0}", sender.RemoteEndPoint.ToString());
-
-                /*byte[] msg = Encoding.ASCII.GetBytes("GET / hello.htm HTTP / 1.1 \r\n" +
-                    "User-Agent: Mozilla / 4.0(compatible; MSIE5.01; Windows NT) \r\n" +
-                    "Host: www.tutorialspoint.com\r\n" +
-                    "Accept-Language: en - us \r\n" +
-                    "Accept-Encoding: gzip, deflate \r\n" +
-                    "Connection: Keep-Alive\r\n" +
-                    "\r\n");*/
 
 
                 byte[] msg = Encoding.ASCII.GetBytes("GET / HTTP/1.1\r\nHost: www.w3.org\r\nConnection: keep-alive\r\nAccept: text/html\r\nUser-Agent: CSharpTests\r\n\r\n");
