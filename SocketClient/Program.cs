@@ -1,22 +1,22 @@
-﻿using System;
+﻿using SocketClient.Requests;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
 
-public class SocketClient
+public class Request
 {
     public static int Main(String[] args)
     {
         Meniu();
-        //StartClient();
         return 0;
     }
 
 
     public static void Meniu()
     {
-
+        HttpRequest request;
         int choice = 0;
 
         do
@@ -29,10 +29,16 @@ public class SocketClient
             Console.WriteLine("Enter your Choice:");
 
 
+            
+
             choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("============================");
 
-            if (choice.Equals(1)) CreateHttpGetRequest();
+            if (choice.Equals(1))
+            {
+                request = new HttpRequest("GET / HTTP/1.1\r\nHost: www.w3.org\r\nConnection: keep-alive\r\nAccept: text/html\r\nUser-Agent: CSharpTests\r\n\r\n");
+                request.CreateHttpGetRequest();
+            }
 
         } while (!choice.Equals(0));
 
@@ -40,7 +46,7 @@ public class SocketClient
 
     }
 
-    public static void CreateHttpGetRequest()
+    public static void StartClient()
     {
         byte[] bytes = new byte[1024];
 
