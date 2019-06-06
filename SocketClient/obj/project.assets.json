@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paulius\\source\\repos\\SocketClient\\SocketClient\\SocketClient.csproj",
+      "projectUniqueName": "C:\\Users\\Paulius\\Documents\\GitHub\\HTTPSocketServer\\SocketClient\\SocketClient.csproj",
       "projectName": "SocketClient",
-      "projectPath": "C:\\Users\\Paulius\\source\\repos\\SocketClient\\SocketClient\\SocketClient.csproj",
+      "projectPath": "C:\\Users\\Paulius\\Documents\\GitHub\\HTTPSocketServer\\SocketClient\\SocketClient.csproj",
       "packagesPath": "C:\\Users\\Paulius\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Paulius\\source\\repos\\SocketClient\\SocketClient\\obj\\",
+      "outputPath": "C:\\Users\\Paulius\\Documents\\GitHub\\HTTPSocketServer\\SocketClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

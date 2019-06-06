@@ -19,7 +19,7 @@ public class SocketClient
 
         try
         {
-            IPHostEntry host = Dns.GetHostEntry("w3schools.com"); 
+            IPHostEntry host = Dns.GetHostEntry("www.w3.org"); 
             IPAddress ipAddress = host.AddressList[0];
             IPEndPoint remoteEP = new IPEndPoint(ipAddress, 80);
 
@@ -33,21 +33,27 @@ public class SocketClient
 
                 Console.WriteLine("Socket connected to {0}", sender.RemoteEndPoint.ToString());
 
-                byte[] msg = Encoding.ASCII.GetBytes("GET /test/demo_form.php?name1=value1&name2=value2 \r\n" +
-                    "Host: w3schools.com\r\n" +
-                    "Content-Length: 0\r\n" +
-                    "\r\n");
+                /*byte[] msg = Encoding.ASCII.GetBytes("GET / hello.htm HTTP / 1.1 \r\n" +
+                    "User-Agent: Mozilla / 4.0(compatible; MSIE5.01; Windows NT) \r\n" +
+                    "Host: www.tutorialspoint.com\r\n" +
+                    "Accept-Language: en - us \r\n" +
+                    "Accept-Encoding: gzip, deflate \r\n" +
+                    "Connection: Keep-Alive\r\n" +
+                    "\r\n");*/
 
 
+                byte[] msg = Encoding.ASCII.GetBytes("GET / HTTP/1.1\r\nHost: www.w3.org\r\nConnection: keep-alive\r\nAccept: text/html\r\nUser-Agent: CSharpTests\r\n\r\n");
 
                 int bytesSent = sender.Send(msg);
 
                 int bytesRec = sender.Receive(bytes);
 
+
                 Console.WriteLine("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
 
                 sender.Shutdown(SocketShutdown.Both);
                 sender.Close();
+
 
             }
             catch (ArgumentNullException ane)
