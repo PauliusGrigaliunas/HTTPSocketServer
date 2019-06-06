@@ -24,6 +24,7 @@ public class Request
 
             Console.WriteLine("============================");
             Console.WriteLine("1 - www.w3.org");
+            Console.WriteLine("2 - local-host");
             Console.WriteLine("0 - EXIT");
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter your Choice:");
@@ -33,6 +34,25 @@ public class Request
 
             choice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("============================");
+
+
+            switch (choice)
+            {
+                case 0:
+                    break;
+                case 1:
+                    request = new HttpRequest("GET / HTTP/1.1\r\nHost: www.w3.org\r\nConnection: keep-alive\r\nAccept: text/html\r\nUser-Agent: CSharpTests\r\n\r\n");
+                    request.CreateHttpGetRequest();
+                    break;
+                case 2:
+                    request = new HttpRequest("GET / HTTP/1.1\r\nHost: localhost\r\nConnection: keep-alive\r\nAccept: text/html\r\nUser-Agent: CSharpTests\r\n\r\n");
+                    request.CreateHttpGetRequest();
+                    break;
+                default:
+                    Console.WriteLine("incorrect choice");
+                    break;
+            }
+
 
             if (choice.Equals(1))
             {

@@ -13,7 +13,7 @@ namespace SocketClient.Requests
 
         public HttpRequest (string request) {
             _request = request;
-            _getHost = GetBetween( request, "Host:", "\r\n");
+            _getHost = GetBetween( request, "Host:", "\r\n") == "localhost" ? Dns.GetHostName() : GetBetween(request, "Host:", "\r\n");
         }
 
         public void CreateHttpGetRequest()
